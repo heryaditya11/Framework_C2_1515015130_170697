@@ -15,9 +15,9 @@ class BuatTableDosenMatakuliah extends Migration
         Schema::create('dosen_matakuliah', function (Blueprint $table) {
             $table->increments('id_dosenmatakuliah');
             $table->integer('dosen_id',false,true);
-            $table->foreign('dosen_id')->references('id_dosen')->on('dosen')->onDelete('cascade');
+            $table->foreign('dosen_id')->references('dosen_id')->on('dosen')->onDelete('cascade');
             $table->integer('matakuliah_id',false,true);
-            $table->foreign('matakuliah_id')->references('id_matakuliah')->on('matakuliah')->onDelete('cascade');
+            $table->foreign('matakuliah_id')->references('matakuliah_id')->on('matakuliah')->onDelete('cascade');
             $table->timestamps();
         });
     }

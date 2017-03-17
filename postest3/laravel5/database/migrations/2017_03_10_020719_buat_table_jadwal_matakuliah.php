@@ -15,11 +15,11 @@ class BuatTableJadwalMatakuliah extends Migration
         Schema::create('jadwal_matakuliah', function (Blueprint $table) {
             $table->increments('id_jadwalmatakuliah');
             $table->integer('mahasiswa_id',false,true);
-            $table->foreign('mahasiswa_id')->references('id_mahasiswa')->on('mahasiswa')->onDelete('cascade');
+            $table->foreign('mahasiswa_id')->references('mahasiswa_id')->on('mahasiswa')->onDelete('cascade');
             $table->integer('ruangan_id',false,true);
-            $table->foreign('ruangan_id')->references('id_ruangan')->on('ruangan')->onDelete('cascade');
+            $table->foreign('ruangan_id')->references('ruangan_id')->on('ruangan')->onDelete('cascade');
             $table->integer('dosen_matakuliah_id',false,true);
-            $table->foreign('dosen_matakuliah_id')->references('id_dosenmatakuliah')->on('dosen_matakuliah')->onDelete('cascade');
+            $table->foreign('dosen_matakuliah_id')->references('dosen_matakuliah_id')->on('dosen_matakuliah')->onDelete('cascade');
             $table->timestamps();
         });
     }

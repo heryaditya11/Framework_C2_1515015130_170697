@@ -13,7 +13,7 @@ class BuatTableRuangan extends Migration
     public function up()
     {
         Schema::create('ruangan', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_ruangan');
             $table->string('title_ruangan');
             $table->timestamps();
         });
